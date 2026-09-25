@@ -1,0 +1,22 @@
+# Python Stuff
+temp.py
+*.mypy_cache/
+pytest_cache/
+**/__pycache__/
+.venv/
+venv/
+.env/
+env/
+*.py[cod]
+tempCodeRunnerFile.*
+
+# Other
+ignored/
+.env
+data/
+hold/
+.coverage
+TEMP.md
+token_cache.*
+*.log
+*.code-workspace
