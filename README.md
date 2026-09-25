@@ -66,6 +66,8 @@ configurações de ambiente pode ser limitada.
 
 ## Uso
 
+![print_execucao.png](assets/print_execucao.png)
+
 - A aplicação utiliza um menu no terminal, onde o usuário pode escolher a
   estrategia de criptografia desejada, e em seguida escolher se deseja
   criptografar ou descriptografar um texto.
