@@ -98,51 +98,51 @@ def descriptografar(texto_criptografado: str, chave: int) -> str:
 def testes_locais():
     # Teste e resultados esperados
     print("CRIPTOGRAFAR")
-    print(criptografar("A", 2)) # -> C
-    print(criptografar("AB", 2)) # -> CD
-    print(criptografar("BA", 2)) # -> DC
-    print(criptografar("Olá Mundo!", 2)) # -> Qnã Owpfq!
-    print(criptografar("Hello World", 2)) # -> Jgnnq Yqtnf
+    print(criptografar("A", 3)) # -> C
+    print(criptografar("AB", 3)) # -> CD
+    print(criptografar("BA", 3)) # -> DC
+    print(criptografar("Olá Mundo!", 3)) # -> Qnã Owpfq!
+    print(criptografar("Hello World", 3)) # -> Jgnnq Yqtnf
     print()
 
     print("DESCRIPTOGRAFAR")
-    print(descriptografar("A", 2)) # -> Y
-    print(descriptografar("C", 2)) # -> A
-    print(descriptografar("CD", 2)) # -> AB
-    print(descriptografar("DC", 2)) # -> BA
-    print(descriptografar("Qnã Owpfq!", 2)) # -> Olá Mundo!
-    print(descriptografar("Jgnnq Yqtnf", 2)) # -> Hello World
+    print(descriptografar("A", 3)) # -> Y
+    print(descriptografar("C", 3)) # -> A
+    print(descriptografar("CD", 3)) # -> AB
+    print(descriptografar("DC", 3)) # -> BA
+    print(descriptografar("Qnã Owpfq!", 3)) # -> Olá Mundo!
+    print(descriptografar("Jgnnq Yqtnf", 3)) # -> Hello World
     print()
 
     # Testes onde criptografamos e depois descriptografamos, e esperamos o mesmo resultado.
     print("CRIPTOGRAFAR E DESCRIPTOGRAFAR")
     print(
         "Texto: A -",
-        f"Passado: {descriptografar(criptografar("A", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("A", 3), 3)}"
     )
     print(
         "Texto: AB -",
-        f"Passado: {descriptografar(criptografar("AB", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("AB", 3), 3)}"
     )
     print(
         "Texto: BA -",
-        f"Passado: {descriptografar(criptografar("BA", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("BA", 3), 3)}"
     )
     print(
         "Texto: Olá Mundo! -",
-        f"Passado: {descriptografar(criptografar("Olá Mundo!", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("Olá Mundo!", 3), 3)}"
     )
     print(
         "Texto: Hello World -",
-        f"Passado: {descriptografar(criptografar("Hello World", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("Hello World", 3), 3)}"
     )
     print(
         "Texto: Olá Mundo! Hello World -",
-        f"Passado: {descriptografar(criptografar("Olá Mundo! Hello World", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("Olá Mundo! Hello World", 3), 3)}"
     )
     print(
         "Texto: Olá Mundo! Hello World 295 ç 42 <> @% -",
-        f"Passado: {descriptografar(criptografar("Olá Mundo! Hello World 295 ç 42 <> @%", 2), 2)}"
+        f"Passado: {descriptografar(criptografar("Olá Mundo! Hello World 295 ç 42 <> @%", 3), 3)}"
     )
     print()
 
@@ -150,8 +150,8 @@ def testes_locais():
     print("CRIPTOGRAFAR E DESCRIPTOGRAFAR - Textos grandes")
     # PTBR
     string_original_1 = "Capivara[3] ou carpincho[4] (nome científico: Hydrochoerus hydrochaeris) é uma espécie de mamífero roedor da família Caviidae e subfamília Hydrochoerinae. Alguns autores consideram que deva ser classificada em uma família própria. Está incluída no mesmo grupo de roedores ao qual se classificam as pacas, cutias, os preás e o porquinho-da-índia. Ocorre por toda a América do Sul ao leste dos Andes em habitats associados a rios, lagos e pântanos, do nível do mar até 1 300 m de altitude. Extremamente adaptável, pode ocorrer em ambientes altamente alterados pelo ser humano. É o maior roedor do mundo, pesando até 91 kg e medindo até 1,2 m de comprimento e 60 cm de altura. A pelagem é densa, de cor avermelhada a marrom escuro. É possível distinguir os machos por conta da presença de uma glândula proeminente no focinho apesar de o dimorfismo sexual não ser aparente. Existe uma série de adaptações no sistema digestório à herbivoria, principalmente no ceco. Alcança a maturidade sexual com cerca de 1,5 ano de idade, e as fêmeas dão à luz geralmente a quatro filhotes por vez, pesando até 1,5 kg e já nascem com pelos e dentição permanente. Em cativeiro, pode viver até 12 anos de idade."
-    criptografado_1 = criptografar(string_original_1, 2)
-    descriptografado_1 = descriptografar(criptografado_1, 2)
+    criptografado_1 = criptografar(string_original_1, 3)
+    descriptografado_1 = descriptografar(criptografado_1, 3)
     if string_original_1 == descriptografado_1:
         print("PTBR - Teste PASSOU")
         print(f"Original:\n {string_original_1}\n")
@@ -167,8 +167,8 @@ def testes_locais():
 
     # Inglês
     string_original_2 = "The capybara (/kæp.ɪˈbɑːr.ə, -băr′ə/ ⓘkap-uh-BAR-uh)[a] or greater capybara (Hydrochoerus hydrochaeris) is the largest living rodent,[2] native to all countries in South America except Chile. It is a semiaquatic herbivore that inhabits savannas and dense forests, living near and in bodies of freshwater and feeding mainly on grasses and aquatic plants. Together with the lesser capybara, it constitutes the genus Hydrochoerus. Its other close relatives include guinea pigs and rock cavies, and it is more distantly related to the agouti, the chinchilla, and the nutria. The capybara is a highly social species that usually lives in groups of 10–20 individuals, but can be found in groups as large as 100. It is hunted for its meat and hide and for grease from its thick fatty skin.[3]"
-    criptografado_2 = criptografar(string_original_2, 2)
-    descriptografado_2 = descriptografar(criptografado_2, 2)
+    criptografado_2 = criptografar(string_original_2, 3)
+    descriptografado_2 = descriptografar(criptografado_2, 3)
     if string_original_2 == descriptografado_2:
         print("Ingles - Teste PASSOU")
         print(f"Original:\n {string_original_2}\n")
