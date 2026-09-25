@@ -16,11 +16,13 @@ def menu_option_cesar():
     print("0 - Voltar ao menu principal")
     operacao = input("Digite o número da operação desejada: ")
     if operacao == "1":
+        print("- Criptografia -")
         texto_simples = input("Digite o texto simples: ")
         chave = int(input("Digite a chave (número inteiro): "))
         texto_criptografado = cesar_ecript(texto_simples, chave)
         print(f"Texto criptografado: {texto_criptografado}")
     elif operacao == "2":
+        print("- Descriptografia -")
         texto_criptografado = input("Digite o texto criptografado: ")
         chave = int(input("Digite a chave (número inteiro): "))
         texto_simples = cesar_dcript(texto_criptografado, chave)
@@ -38,8 +40,10 @@ def menu_option_vigenere():
     print("0 - Voltar ao menu principal")
     operacao = input("Digite o número da operação desejada: ")
     if operacao == "1":
+        print("- Criptografia -")
         pass
     elif operacao == "2":
+        print("- Descriptografia -")
         pass
     elif operacao == "0":
         print("Voltando ao menu principal...")
@@ -55,8 +59,10 @@ def menu_option_substituicao():
     print("0 - Voltar ao menu principal")
     operacao = input("Digite o número da operação desejada: ")
     if operacao == "1":
+        print("- Criptografia -")
         pass
     elif operacao == "2":
+        print("- Descriptografia -")
         pass
     elif operacao == "0":
         print("Voltando ao menu principal...")
@@ -71,8 +77,10 @@ def menu_option_transposicao():
     print("0 - Voltar ao menu principal")
     operacao = input("Digite o número da operação desejada: ")
     if operacao == "1":
+        print("- Criptografia -")
         pass
     elif operacao == "2":
+        print("- Descriptografia -")
         pass
     elif operacao == "0":
         print("Voltando ao menu principal...")
