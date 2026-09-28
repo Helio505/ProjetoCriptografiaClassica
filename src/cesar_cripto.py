@@ -102,20 +102,20 @@ def descriptografar(texto_criptografado: str, chave: int) -> str:
 def testes_locais():
     # Teste e resultados esperados
     print("CRIPTOGRAFAR")
-    print(criptografar("A", 3)) # -> C
-    print(criptografar("AB", 3)) # -> CD
-    print(criptografar("BA", 3)) # -> DC
-    print(criptografar("Olá Mundo!", 3)) # -> Qnã Owpfq!
-    print(criptografar("Hello World", 3)) # -> Jgnnq Yqtnf
+    print(criptografar("A", 3))  # -> C
+    print(criptografar("AB", 3))  # -> CD
+    print(criptografar("BA", 3))  # -> DC
+    print(criptografar("Olá Mundo!", 3))  # -> Qnã Owpfq!
+    print(criptografar("Hello World", 3))  # -> Jgnnq Yqtnf
     print()
 
     print("DESCRIPTOGRAFAR")
-    print(descriptografar("A", 3)) # -> Y
-    print(descriptografar("C", 3)) # -> A
-    print(descriptografar("CD", 3)) # -> AB
-    print(descriptografar("DC", 3)) # -> BA
-    print(descriptografar("Qnã Owpfq!", 3)) # -> Olá Mundo!
-    print(descriptografar("Jgnnq Yqtnf", 3)) # -> Hello World
+    print(descriptografar("A", 3))  # -> Y
+    print(descriptografar("C", 3))  # -> A
+    print(descriptografar("CD", 3))  # -> AB
+    print(descriptografar("DC", 3))  # -> BA
+    print(descriptografar("Qnã Owpfq!", 3))  # -> Olá Mundo!
+    print(descriptografar("Jgnnq Yqtnf", 3))  # -> Hello World
     print()
 
     # Testes onde criptografamos e depois descriptografamos, e esperamos o mesmo resultado.
