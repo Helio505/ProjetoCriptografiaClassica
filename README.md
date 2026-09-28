@@ -75,6 +75,6 @@ configurações de ambiente pode ser limitada.
 ### Técnicas de Criptografia Implementadas
 
 - [x] Cifra de César
-- [ ] Cifra de Vigenère
+- [x] Cifra de Vigenère
 - [ ] Cifra de Substituição Monoalfabética
 - [ ] Cifra de Transposição (Columnar ou Rail Fence)

@@ -6,6 +6,8 @@ import sys
 
 from src.cesar_cripto import criptografar as cesar_ecript
 from src.cesar_cripto import descriptografar as cesar_dcript
+from src.vigenere_cripto import criptografar as vigenere_ecript
+from src.vigenere_cripto import descriptografar as vigenere_dcript
 
 
 def menu_option_cesar():
@@ -32,6 +34,7 @@ def menu_option_cesar():
     else:
         print("Opção inválida. Tente novamente.")
 
+
 def menu_option_vigenere():
     print("- Você escolheu a Cifra de Vigenère -")
     print("Escolha a operação:")
@@ -41,10 +44,16 @@ def menu_option_vigenere():
     operacao = input("Digite o número da operação desejada: ")
     if operacao == "1":
         print("- Criptografia -")
-        pass
+        texto_simples = input("Digite o texto simples: ")
+        chave = input("Digite a chave (palavra): ")
+        texto_criptografado = vigenere_ecript(texto_simples, chave)
+        print(f"Texto criptografado: {texto_criptografado}")
     elif operacao == "2":
         print("- Descriptografia -")
-        pass
+        texto_criptografado = input("Digite o texto criptografado: ")
+        chave = input("Digite a chave (palavra): ")
+        texto_simples = vigenere_dcript(texto_criptografado, chave)
+        print(f"Texto simples: {texto_simples}")
     elif operacao == "0":
         print("Voltando ao menu principal...")
     else:
@@ -69,6 +78,7 @@ def menu_option_substituicao():
     else:
         print("Opção inválida. Tente novamente.")
 
+
 def menu_option_transposicao():
     print("- Você escolheu a Cifra de Transposição (Columnar ou Rail Fence) -")
     print("Escolha a operação:")
@@ -86,6 +96,7 @@ def menu_option_transposicao():
         print("Voltando ao menu principal...")
     else:
         print("Opção inválida. Tente novamente.")
+
 
 def main():
     print("=== Projeto de Criptografia Clássica ===")

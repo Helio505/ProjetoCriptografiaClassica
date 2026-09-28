@@ -30,6 +30,8 @@ Possiveis limitações:
 - Se a chave for muito grande, podemos ter problemas.
 - A testagem é manual, e não automatizada. Por isso, é possivel que erros passem despercebidos.
 O correto seria implementar testes unitários, ex Pytest.
+
+Autor: Helio
 """
 
 # Nosso alfabeto que utilizamos para substituir caracteres
@@ -39,6 +41,7 @@ simbolos = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 minusculas = "abcdefghijklmnopqrstuvwxyzàáâãäåèéêëìíîïòóôõöøùúûüçñ"
 maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÄÅÈÉÊËÌÍÎÏÒÓÔÕÖØÙÚÛÜÇÑ"
 alfabeto = f"{numeros}{simbolos}{minusculas}{maiusculas}"
+
 
 def criptografar(texto_simples: str, chave: int) -> str:
     """
@@ -94,6 +97,7 @@ def descriptografar(texto_criptografado: str, chave: int) -> str:
     # Converter de volta de array para string
     string_texto_simples = "".join(array_texto_simples)
     return string_texto_simples
+
 
 def testes_locais():
     # Teste e resultados esperados
