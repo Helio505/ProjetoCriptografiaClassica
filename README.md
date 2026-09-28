@@ -4,12 +4,16 @@ Projeto desenvolvido com o objetivo de estudar e implementar algoritmos
 clássicos de criptografia, como a Cifra de César, Cifra de Vigenère, Cifra de
 Substituição Monoalfabética e Cifra de Transposição (Columnar ou Rail Fence).
 
+A explicação breve de cada técnica de criptografia e as anotações de
+implementação, ficam em um comentário multilinha no início do próprio arquivo de
+implementação de cada técnica.
+
 ## Escolha da linguagem de programação
 
 Escolhemos Python por sua simplicidade, pois o importante nessa atividade são os
 conceitos fundamentais de criptografia. Python é a linguagem com entendimento
 mais simples, e o grupo já possui alguma experiência com ela. O fato de Python
-já possuir em sua stdlib varias bibliotecas de criptografia, também é
+já possuir em sua stdlib várias bibliotecas de criptografia, também é
 importante, pois diminui a complexidade de instalação e preparação de ambiente.
 
 ## Aviso de compatibilidade
@@ -69,7 +73,7 @@ configurações de ambiente pode ser limitada.
 ![print_execucao.png](assets/print_execucao.png)
 
 - A aplicação utiliza um menu no terminal, onde o usuário pode escolher a
-  estrategia de criptografia desejada, e em seguida escolher se deseja
+  estratégia de criptografia desejada, e em seguida escolher se deseja
   criptografar ou descriptografar um texto.
 
 ### Técnicas de Criptografia Implementadas
