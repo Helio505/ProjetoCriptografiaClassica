@@ -80,5 +80,5 @@ configurações de ambiente pode ser limitada.
 
 - [x] Cifra de César
 - [x] Cifra de Vigenère
-- [ ] Cifra de Substituição Monoalfabética
+- [x] Cifra de Substituição Monoalfabética
 - [ ] Cifra de Transposição (Columnar ou Rail Fence)

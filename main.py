@@ -8,6 +8,8 @@ from src.cesar_cripto import criptografar as cesar_ecript
 from src.cesar_cripto import descriptografar as cesar_dcript
 from src.vigenere_cripto import criptografar as vigenere_ecript
 from src.vigenere_cripto import descriptografar as vigenere_dcript
+from src.substituicao_cripto import criptografar as substituicao_ecript
+from src.substituicao_cripto import descriptografar as substituicao_dcript
 
 
 def menu_option_cesar():
@@ -66,15 +68,38 @@ def menu_option_substituicao():
     print("1 - Criptografa")
     print("2 - Descriptografa")
     print("0 - Voltar ao menu principal")
+
     operacao = input("Digite o número da operação desejada: ")
+
     if operacao == "1":
         print("- Criptografia -")
-        pass
+
+        texto_simples = input("Digite o texto simples: ")
+        chave = input("Digite a chave (palavra): ")
+
+        texto_criptografado = substituicao_ecript(
+            texto_simples,
+            chave
+        )
+
+        print(f"Texto criptografado: {texto_criptografado}")
+
     elif operacao == "2":
         print("- Descriptografia -")
-        pass
+
+        texto_criptografado = input("Digite o texto criptografado: ")
+        chave = input("Digite a chave (palavra): ")
+
+        texto_simples = substituicao_dcript(
+            texto_criptografado,
+            chave
+        )
+
+        print(f"Texto simples: {texto_simples}")
+
     elif operacao == "0":
         print("Voltando ao menu principal...")
+
     else:
         print("Opção inválida. Tente novamente.")
 
