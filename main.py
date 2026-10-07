@@ -10,6 +10,8 @@ from src.vigenere_cripto import criptografar as vigenere_ecript
 from src.vigenere_cripto import descriptografar as vigenere_dcript
 from src.substituicao_cripto import criptografar as substituicao_ecript
 from src.substituicao_cripto import descriptografar as substituicao_dcript
+from src.transposicao_cripto import criptografar as transposicao_ecript
+from src.transposicao_cripto import descriptografar as transposicao_dcript
 
 
 def menu_option_cesar():
@@ -77,10 +79,7 @@ def menu_option_substituicao():
         texto_simples = input("Digite o texto simples: ")
         chave = input("Digite a chave (palavra): ")
 
-        texto_criptografado = substituicao_ecript(
-            texto_simples,
-            chave
-        )
+        texto_criptografado = substituicao_ecript(texto_simples, chave)
 
         print(f"Texto criptografado: {texto_criptografado}")
 
@@ -90,10 +89,7 @@ def menu_option_substituicao():
         texto_criptografado = input("Digite o texto criptografado: ")
         chave = input("Digite a chave (palavra): ")
 
-        texto_simples = substituicao_dcript(
-            texto_criptografado,
-            chave
-        )
+        texto_simples = substituicao_dcript(texto_criptografado, chave)
 
         print(f"Texto simples: {texto_simples}")
 
@@ -105,18 +101,27 @@ def menu_option_substituicao():
 
 
 def menu_option_transposicao():
-    print("- Você escolheu a Cifra de Transposição (Columnar ou Rail Fence) -")
+    print("- Você escolheu a Cifra de Transposição (Rail Fence) -")
     print("Escolha a operação:")
     print("1 - Criptografa")
     print("2 - Descriptografa")
     print("0 - Voltar ao menu principal")
     operacao = input("Digite o número da operação desejada: ")
+
     if operacao == "1":
         print("- Criptografia -")
-        pass
+        texto_simples = input("Digite o texto simples: ")
+        chave = int(input("Digite a chave (número de trilhos - ex: 3): "))
+        texto_criptografado = transposicao_ecript(texto_simples, chave)
+        print(f"Texto criptografado: {texto_criptografado}")
+
     elif operacao == "2":
         print("- Descriptografia -")
-        pass
+        texto_criptografado = input("Digite o texto criptografado: ")
+        chave = int(input("Digite a chave (número de trilhos - ex: 3): "))
+        texto_simples = transposicao_dcript(texto_criptografado, chave)
+        print(f"Texto simples: {texto_simples}")
+
     elif operacao == "0":
         print("Voltando ao menu principal...")
     else:
@@ -126,14 +131,14 @@ def menu_option_transposicao():
 def main():
     print("=== Projeto de Criptografia Clássica ===")
 
-    # Menu infinito, que só sai se acionarmo "0" ou Ctrl+C
+    # Menu infinito, que só sai se acionarmos "0" ou Ctrl+C
     while True:
         print()
         print("Escolha a estratégia de criptografia:")
         print("1 - Cifra de César")
         print("2 - Cifra de Vigenère")
         print("3 - Cifra de Substituição Monoalfabética")
-        print("4 - Cifra de Transposição (Columnar ou Rail Fence)")
+        print("4 - Cifra de Transposição (Rail Fence)")
         print("0 - Sair")
         escolha = input("Digite o número da estratégia desejada: ")
 
