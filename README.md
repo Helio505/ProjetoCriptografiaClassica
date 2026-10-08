@@ -82,3 +82,4 @@ configurações de ambiente pode ser limitada.
 - [x] Cifra de Vigenère
 - [x] Cifra de Substituição Monoalfabética
 - [x] Cifra de Transposição (Columnar ou Rail Fence)
+- [x] Cifra de Atbash
